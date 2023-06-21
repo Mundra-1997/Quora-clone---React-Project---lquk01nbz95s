@@ -9,7 +9,7 @@ const Login = () => {
     
   const handleLogin = (e)=>{
     e.preventDefault();
-    auth.signInWithEmailAndPassword(email.trim(),password).then((auth)=>{
+    auth.signInWithEmailAndPassword(email,password).then((auth)=>{
       console.log(auth)
     }).catch((e)=> alert(e.message))
     setPassword("");
@@ -17,7 +17,7 @@ const Login = () => {
   }
   const handleRegister = (e)=>{
     e.preventDefault();
-    auth.createUserWithEmailAndPassword(email.trim(),password).then((auth)=>{
+    auth.createUserWithEmailAndPassword(email,password).then((auth)=>{
       if(auth){
         console.log(auth)
       }
