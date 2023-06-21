@@ -9,7 +9,7 @@ const Login = () => {
     
   const handleLogin = (e)=>{
     e.preventDefault();
-    auth.signInWithEmailAndPassword(email,password).then((auth)=>{
+    auth.signInWithEmailAndPassword(email.trim(),password).then((auth)=>{
       console.log(auth)
     }).catch((e)=> alert(e.message))
     setPassword("");
