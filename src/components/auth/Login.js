@@ -17,7 +17,7 @@ const Login = () => {
   }
   const handleRegister = (e)=>{
     e.preventDefault();
-    auth.createUserWithEmailAndPassword(email.trim(),password.trim().then((auth)=>{
+    auth.createUserWithEmailAndPassword(email.,password).then((auth)=>{
       if(auth){
         console.log(auth)
       }
